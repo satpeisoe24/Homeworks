@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/airmash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Mash"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="30dp"
+        />
+    <ImageView
+        android:id="@+id/shoe"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/shoe"
+        app:layout_constraintTop_toBottomOf="@+id/airmash"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+    <ImageView
+        android:id="@+id/addto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/addto"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/shoe"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/favourite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/favourite"
+        app:layout_constraintTop_toBottomOf="@+id/shoe"
+        app:layout_constraintRight_toLeftOf="@id/addto"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favourite"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/shoetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shoetxt"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimum Order is Pass"
+        android:layout_marginTop="15dp"
+        android:textSize="13dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/shoetxt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/order"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ks = 12,500 "
+        android:textColor="@color/orange"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_goneMarginLeft="20dp"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/pcs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pcs"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/value"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/sold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28 Sold"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/pcs"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="25dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/const1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Open"
+        android:textSize="15dp"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        />
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintRight_toLeftOf="@id/go"/>
+
+   <ImageView
+       android:id="@+id/go"
+       android:layout_width="20dp"
+       android:layout_height="20dp"
+       android:src="@drawable/addressarrow"
+       android:layout_marginRight="20dp"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/view1"
+       app:layout_constraintBottom_toBottomOf="@id/view2"/>
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/product"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/home"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <ImageView
+        android:id="@+id/message"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/message"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:layout_constraintLeft_toRightOf="@id/home"/>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addtocart"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        app:cardBackgroundColor="@color/orange"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:layout_constraintLeft_toRightOf="@id/message">
+
+        <Button
+            android:id="@+id/addtocartid"
+            android:layout_width="114dp"
+            android:layout_height="34dp"
+            android:text="ADD TO CART"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:textColor="@color/orange"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buynow"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="BUY NOW"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:layout_constraintLeft_toRightOf="@id/addtocart"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

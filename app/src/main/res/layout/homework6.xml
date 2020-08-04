@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#CFDCD8"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/monero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monero Wallet"
+        android:textSize="20dp"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charge"
+        android:textSize="10dp"
+        android:textColor="#7016BF"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/chargeid"/>
+
+    <ImageView
+        android:id="@+id/chargeid"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:src="@drawable/bottom"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/monero"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/monero"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/mucho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mucho Dolares"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/xmr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XMR Balance"
+            android:textSize="15dp"
+            android:textColor="#7016BF"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mucho"/>
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24.3553"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/xmr"/>
+
+        <TextView
+            android:id="@+id/usd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4800.43 USD"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/value"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/usd"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addconst"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            >
+            
+            <ImageView
+                android:id="@+id/sync"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/sync"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/syncing"/>
+
+            <TextView
+                android:id="@+id/syncing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SYNCING BLOCKCHAIN"
+                android:textSize="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/sync"
+                app:layout_constraintRight_toRightOf="parent"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/const3"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/sendid">
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sent"
+            />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/sendid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/card2"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/const2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/receiveid">
+        <ImageView
+            android:id="@+id/receive"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/received"
+            />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/receiveid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receive"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/card3"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/const3"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/today"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/today"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+            <ImageView
+                android:id="@+id/received"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/received"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/receivedid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Received"
+            android:textSize="13dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/card4"/>
+
+        <TextView
+            android:id="@+id/receivedxmr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14545 XMR"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@id/receivedid"
+            app:layout_constraintLeft_toRightOf="@id/card4"/>
+
+        <TextView
+            android:id="@+id/receivedxmr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14545 XMR"
+            android:textSize="13dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/xmrusd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="434 USD"
+            android:textSize="13dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/receivedxmr2"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/card4"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:id="@+id/sent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/sent"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/sentid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sent"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@id/receivedxmr1"
+            app:layout_constraintLeft_toRightOf="@id/card5"/>
+
+        <TextView
+            android:id="@+id/sentxmr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14545 XMR"
+            android:textSize="13dp"
+            app:layout_constraintTop_toBottomOf="@id/sentid"
+            app:layout_constraintLeft_toRightOf="@id/card5"/>
+
+        <TextView
+            android:id="@+id/sentxmr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14545 XMR"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/xmrusd"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sentusd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="434 USD"
+            android:textSize="13dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/sentxmr2"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

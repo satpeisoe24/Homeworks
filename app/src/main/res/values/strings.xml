@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="one">One</string>
+    <string name="description">description</string>
+    <string name="txt">These examples are from the Cambridge English Corpus and from sources on the web. Any opinions in the examples do not
+        represent the opinion of the Cambridge Dictionary editors or of Cambridge University Press or its licensors.</string>
+    <string name="shoetxt">These examples are from the Cambridge English Corpus and from sources on the web. Any opinions in the examples do not
+        represent the opinion of the Cambridge Dictionary editors</string>
+    <string name="missionabout">These examples are from the Cambridge English Corpus and from sources on the web. Any opinions in the examples do not
+        represent the opinion of the Cambridge Dictionary editors. These examples are from the Cambridge English Corpus and from sources on the web. Any opinions in the examples do not
+        represent the opinion of the Cambridge Dictionary editors</string>
+</resources>

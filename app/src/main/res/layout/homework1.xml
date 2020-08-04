@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Package and Shipping"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:background="@color/gray"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:src="@drawable/shipping"
+            android:layout_margin="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/mainconst"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="2"
+            />
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/mainconst"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toRightOf="@id/image"
+           app:layout_constraintHorizontal_weight="4"
+           android:layout_marginRight="10dp"
+           >
+
+           <TextView
+               android:id="@+id/text1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="1.50Kg"
+               android:textSize="20dp"
+               android:textColor="@color/gray"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintBottom_toTopOf="@+id/text2"/>
+
+           <TextView
+               android:id="@+id/text2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Weight Space"
+               android:textColor="@color/gray"
+               android:textSize="15dp"
+               app:layout_constraintTop_toBottomOf="@+id/text1"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:layout_marginTop="10dp"/>
+
+           <TextView
+               android:id="@+id/text3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="20cm*15cm*10cm"
+               android:textSize="20dp"
+               android:textColor="@color/gray"
+               android:textStyle="bold"
+               app:layout_constraintTop_toBottomOf="@id/text2"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:layout_marginTop="20dp"/>
+
+           <TextView
+               android:id="@+id/text4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Size"
+               android:textSize="15dp"
+               android:textColor="@color/gray"
+               app:layout_constraintTop_toBottomOf="@+id/text3"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:layout_marginTop="10dp"/>
+
+           <TextView
+               android:id="@+id/text5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Shipping Out Within 5 days"
+               android:textColor="@color/gray"
+               android:textStyle="bold"
+               android:textSize="20dp"
+               android:layout_marginRight="10dp"
+               app:layout_constraintTop_toBottomOf="@id/text4"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:layout_marginTop="20dp"/>
+
+           <TextView
+               android:id="@+id/text6"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Processing Time"
+               android:textSize="15dp"
+               android:textColor="@color/gray"
+               app:layout_constraintTop_toBottomOf="@id/text5"
+               app:layout_constraintLeft_toLeftOf="parent"
+               android:paddingBottom="10dp"
+               />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:layout_constraintTop_toBottomOf="@id/const1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="25dp"
+        android:text="Shipping Address"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/addressid"
+        app:layout_constraintBottom_toTopOf="@id/button3"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/addressid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/addressarrow"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/address"
+        app:layout_constraintBottom_toTopOf="@id/button3"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/addressid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Method"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/gray"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/deliverytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Time"
+        android:textColor="@color/gray"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+       app:layout_constraintTop_toBottomOf="@id/delivery"
+        app:layout_constraintRight_toLeftOf="@id/coad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/coad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coad"
+        android:textSize="20dp"
+        android:textColor="@color/gray"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/delivery"
+        app:layout_constraintLeft_toRightOf="@id/deliverytime"
+        app:layout_constraintRight_toLeftOf="@id/carier"/>
+    
+    <TextView
+        android:id="@+id/carier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:text="Trading Carier"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/delivery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/coad"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deliverytime"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45 Days"
+        android:textSize="20dp"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/ks1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ks 5,000"
+        android:textColor="@color/gray"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintLeft_toRightOf="@id/day1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/mcl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MCL Delivery"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintLeft_toRightOf="@id/ks1"/>
+
+    <ImageView
+        android:id="@+id/marked"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/marked_24"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50 Days"
+        android:textColor="@color/gray"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/day1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/ks2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ks 22,000"
+        android:textSize="20dp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/ks1"
+        app:layout_constraintLeft_toRightOf="@id/day2"/>
+
+    <TextView
+        android:id="@+id/dig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dig"
+        android:textColor="@color/gray"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mcl"
+        app:layout_constraintLeft_toRightOf="@id/ks2"/>
+
+    <ImageView
+        android:id="@+id/mark"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/mark_24"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/marked"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+    <View
+        android:id="@+id/textgray"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/gray"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/day2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/textgray"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp">
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Apply"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

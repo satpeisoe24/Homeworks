@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDEEEE">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Order Number : 12764899"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/detail"/>
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Detail"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/const2"
+            app:layout_constraintTop_toBottomOf="@id/order">
+
+            <TextView
+                android:id="@+id/ks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="1050000 Ks"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/delivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELIVERED"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                app:layout_constraintTop_toBottomOf="@id/ks"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order date : 19/9/1999"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/delivered"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <TextView
+                android:id="@+id/item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total item : 4 "
+                android:textSize="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintLeft_toRightOf="@id/const1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail"
+            app:layout_constraintBottom_toBottomOf="@id/const1"
+            >
+
+            <TextView
+                android:id="@+id/deliverydetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Detail"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/white"
+                android:background="@color/orange"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/deliverydetail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/detailaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yangon , Hlaing Township,"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/address"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/detailaddress2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thanlan Street, 24B"
+                android:textSize="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/detailaddress"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/const1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/const4"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="4"
+            >
+
+            <TextView
+                android:id="@+id/deliverycharges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Charges"
+                android:textSize="15dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <TextView
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply Coupon code"
+                android:textSize="15dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/deliverycharges"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@id/code"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/const3"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="4"
+            >
+
+            <TextView
+                android:id="@+id/full1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/full2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/full1"/>
+
+            <TextView
+                android:id="@+id/full3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/gray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/full2"/>
+
+            <TextView
+                android:id="@+id/delifee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2000 Ks"
+                android:textColor="@color/orange"
+                android:textSize="15dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/full1"
+                />
+            <TextView
+                android:id="@+id/idcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No.12376647"
+                android:textSize="15dp"
+                android:textColor="@color/orange"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/delifee"
+                app:layout_constraintLeft_toRightOf="@id/full2"/>
+            <TextView
+                android:id="@+id/discountid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20% ( 20000 Ks )"
+                android:textColor="@color/orange"
+                android:layout_margin="10dp"
+
+                android:textSize="15dp"
+                app:layout_constraintTop_toBottomOf="@id/idcode"
+                app:layout_constraintLeft_toRightOf="@id/full3"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/const3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/const6"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="4"
+            >
+            <TextView
+                android:id="@+id/paymentmethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintHorizontal_weight="4"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/const5">
+
+            <TextView
+                android:id="@+id/full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="15dp"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BANK TRANSFER"
+                android:textColor="@color/orange"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/full"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/const6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            
+            <ImageView
+                android:id="@+id/phoneimg"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <TextView
+                android:id="@+id/iphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iphone and Plus"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/phoneimg"
+                />
+
+            <TextView
+                android:id="@+id/phoneks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="900,000 Ks"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/orange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/phonemodel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@id/iphone"
+                app:layout_constraintLeft_toRightOf="@id/phoneimg"/>
+
+            <TextView
+                android:id="@+id/phoneqty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty : 1"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@id/phoneimg"
+                app:layout_constraintTop_toBottomOf="@id/phonemodel"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/const7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/white"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blender N41015"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img"/>
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="999,999 Ks"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/orange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panasonic"
+                android:textSize="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintLeft_toRightOf="@id/img"/>
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty : 1"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/model"
+                app:layout_constraintLeft_toRightOf="@id/img"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/const8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Information"
+                android:textSize="15dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/phonenumber"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="12dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/information"
+                app:layout_constraintBottom_toTopOf="@id/accnumber"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/accnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Number"
+                android:textSize="12dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/phonenumber"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/names"
+                />
+
+            <TextView
+                android:id="@+id/names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="12dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/accnumber"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

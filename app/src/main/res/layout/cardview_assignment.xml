@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent" >
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="10dp"
+            android:layout_marginTop="20dp"
+            android:foregroundGravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/cartname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zay Yar Lin"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/cart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+            android:id="@+id/levle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level: 4"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/cartname"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exp Point: 4,000"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:textSize="20dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/levle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/message"
+            android:layout_marginRight="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/edit"
+            app:layout_constraintVertical_chainStyle="spread"
+            />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/edit"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message"
+            app:layout_constraintBottom_toTopOf="@+id/setting"/>
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/setting"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/const1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/box"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/box"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/text"/>
+
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Status"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/box"
+            app:layout_constraintRight_toLeftOf="@id/bottom"
+            />
+
+        <ImageView
+            android:id="@+id/bottom"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bottom"
+            app:layout_constraintLeft_toRightOf="@+id/text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/ultitext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ultilities"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/const2"
+        android:gravity="center_horizontal" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ultitext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/const4"
+        app:layout_constraintVertical_chainStyle="packed"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/card2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart1"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grandfather Cat"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/card1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/text2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintLeft_toRightOf="@+id/card1"
+            app:layout_constraintRight_toLeftOf="@+id/card3"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart2"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grandmother Cat"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/card2"
+            app:layout_constraintLeft_toRightOf="@id/text1"
+            app:layout_constraintRight_toLeftOf="@+id/text3"
+            app:layout_constraintHorizontal_weight="3"/>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/card2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart1"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Father Card"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/card1"
+            app:layout_constraintLeft_toRightOf="@+id/text2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/card5"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart4"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mother Card"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/card4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/text5"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+           app:layout_constraintTop_toBottomOf="@+id/text2"
+            app:layout_constraintLeft_toRightOf="@+id/card4"
+            app:layout_constraintRight_toLeftOf="@+id/card6"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart5"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Older Brother Cat"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+           app:layout_constraintTop_toBottomOf="@+id/card5"
+            app:layout_constraintLeft_toRightOf="@+id/text4"
+            app:layout_constraintRight_toLeftOf="@+id/text6"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card6"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text3"
+            app:layout_constraintLeft_toRightOf="@+id/card5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart6"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Older Sister Cat"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/card6"
+            app:layout_constraintLeft_toRightOf="@+id/text5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card7"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+           app:layout_constraintTop_toBottomOf="@+id/text4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/card8"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart7"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Cat"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/card7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/text8"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card8"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+           app:layout_constraintTop_toBottomOf="@+id/text5"
+            app:layout_constraintLeft_toRightOf="@id/card7"
+            app:layout_constraintRight_toLeftOf="@+id/card9"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart8"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Younger Brother Cat"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+          app:layout_constraintTop_toBottomOf="@id/card8"
+            app:layout_constraintLeft_toRightOf="@id/text7"
+            app:layout_constraintRight_toLeftOf="@+id/text9"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card9"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/text6"
+            app:layout_constraintLeft_toRightOf="@+id/card8"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            >
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart9"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Younger Sister Card"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:padding="5dp"
+           app:layout_constraintTop_toBottomOf="@id/card9"
+            app:layout_constraintLeft_toRightOf="@id/text8"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/const3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/const4"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       app:layout_constraintTop_toBottomOf="@+id/button1"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/const5">
+
+       <TextView
+           android:id="@+id/address"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toLeftOf="@+id/addressid"
+           android:text="Address"
+           android:textSize="25dp"
+           android:textStyle="bold"
+           app:layout_constraintHorizontal_chainStyle="spread_inside"
+         android:layout_marginLeft="10dp"
+           android:textColor="@color/gray"/>
+
+       <ImageView
+           android:id="@+id/addressid"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/addressarrow"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:layout_marginRight="20dp"
+           app:layout_constraintLeft_toRightOf="@+id/address"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/const4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/paymentid"
+            android:text="Payment Methods"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/gray"/>
+
+        <ImageView
+            android:id="@+id/paymentid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addressarrow"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/payment"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/const5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/gray"
+        android:padding="3dp"/>
+
+   
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
